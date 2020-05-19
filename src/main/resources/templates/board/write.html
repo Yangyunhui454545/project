@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-wdith", initial-scale="1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/tave.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div th:insert="common/header.html" id="header"></div>
+
+
+
+
+<div class="container">
+    <div class="row" style="white-space:pre;">
+        <form  action="/post" method="post">
+            <table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+                <thead>
+                <tr>
+                    <th colspan="2" style="background-color: #eeeeee; text-align: center;">작성하기</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" placeholder="제목" name="title" maxlength="50"/></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control" placeholder="작성자" name="writer" maxlength="50"/></td>
+                </tr>
+                <tr>
+                    <td><textarea class="form-control" placeholder="내용" name="content" maxlength="2048" style="height: 350px;"></textarea></td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="submit" class="btn btn-primary pull-right" value="글쓰기" />
+        </form>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div th:insert="common/footer.html" id="footer"></div>
+</body>
+</html>

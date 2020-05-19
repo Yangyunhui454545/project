@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-wdith", initial-scale="1">
+
+</head>
+<body>
+<div layout:fragment="content">
+<div class="container">
+    <div class="row" style="white-space:pre;">
+        <table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+            <thead>
+            <tr>
+                <th><span th:text="${boardDto.title}"colspan="3" style="background-color: #eeeeee; text-align: center;"></span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td style="width: 50%;"></td>
+                <td> <span th:text="${boardDto.writer}" align ="right"></span></td>
+                <td><span th:text="${boardDto.createdDate}"></span></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span th:text="${boardDto.content}"></span></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="min-height:200px; text-align:left"></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!-- 수정/삭제 -->
+
+    <a th:href="@{'/edit/' + ${boardDto.id}}" class="btn btn-primary">
+        수정
+    </a><form id="delete-form" th:action="@{'/post/edit/' + ${boardDto.id}}" method="post">
+        <input type="hidden" name="_method" value="delete"/>
+        <button id="delete-btn">삭제</button>
+    </form>
+    </div>
+</div>
+<br>
+</div>
+</body>
+</html>
