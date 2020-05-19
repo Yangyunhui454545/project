@@ -19,7 +19,7 @@ public class ProjectApplication {
     @Bean
     public InternalResourceViewResolver setupViewResolver(){
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/WEB-INF/view/");
+        resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
         return resolver;
     }
