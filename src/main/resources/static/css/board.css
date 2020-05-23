@@ -1,7 +1,72 @@
 table {
-     border-collapse: collapse;
- }
-
-table, th, td {
-    border: 1px solid black;
+	text-align: center; 
+	border: 1px solid #dddddd;
+}
+th {
+	background-color: #eeeeee; 
+	text-align: center;
+}
+td input.title {
+	font-size: 25px;
+}
+td textarea.text {
+	height: 350px; 
+	font-size: 20px;
+}
+.viewTitle {
+	background-color: #eeeeee; 
+	text-align: center; 
+	font-size: 25px; 
+	font-style: bold;
+}
+.temp {
+	width: 50%;
+}
+.viewWriter {
+	width: 40%;
+}
+.viewText {
+	height: 200px; 
+	text-align: left; 
+	padding: 70px 60px; 
+	font-size: 20px;
+}
+button {
+	background-color: #0066CC;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+}
+.filebox .upload-display { 
+	/* 이미지가 표시될 지역 */ 
+	margin-bottom: 5px; 
+} 
+@media(min-width: 768px) { 
+	.filebox .upload-display { 
+		display: inline-block; 
+		margin-right: 5px; 
+		margin-bottom: 0; 
+	} 
+}
+.filebox .upload-thumb-wrap { 
+	/* 추가될 이미지를 감싸는 요소 */ 
+	display: inline-block; 
+	width: 54px; 
+	padding: 2px; 
+	vertical-align: middle; 
+	border: 1px solid #ddd; 
+	border-radius: 5px; 
+	background-color: #fff; 
+} 
+.filebox .upload-display img { 
+	/* 추가될 이미지 */ 
+	display: block; 
+	max-width: 100%; 
+	width: 100% \9; 
+	height: auto; 
 }

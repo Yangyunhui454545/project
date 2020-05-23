@@ -1,14 +1,9 @@
 package com.tave.project.dto;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import com.tave.project.Member;
+import com.tave.project.member.Member;
 import org.springframework.stereotype.Repository;
 
-
+import java.sql.*;
 
 @Repository
 public class MemberDao implements com.tave.project.dto.IMemberDao {
@@ -16,7 +11,7 @@ public class MemberDao implements com.tave.project.dto.IMemberDao {
     private String driver = "com.mysql.jdbc.Driver";
     private String url = "jdbc:mysql://localhost:3306/mem?serverTimezone=UTC";
     private String userid = "root";
-    private String userpw = "1234";
+    private String userpw = "root";
 
     private Connection conn = null;
     private PreparedStatement pstmt = null;
@@ -36,9 +31,7 @@ public class MemberDao implements com.tave.project.dto.IMemberDao {
             pstmt.setString(2, member.getMemPw());
             pstmt.setString(3, member.getPhone());
             result = pstmt.executeUpdate();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         } finally {
             try {

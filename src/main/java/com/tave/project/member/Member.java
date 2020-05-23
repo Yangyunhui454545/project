@@ -1,4 +1,4 @@
-package com.tave.project;
+package com.tave.project.member;
 
 public class Member {
 

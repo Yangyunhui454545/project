@@ -1,6 +1,6 @@
 package com.tave.project.dto;
 
-import com.tave.project.Member;
+import com.tave.project.member.Member;
 
 public interface IMemberDao {
 	int memberInsert(Member member);
