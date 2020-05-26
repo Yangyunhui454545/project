@@ -54,6 +54,7 @@ public class BoardService {
         return this.convertEntityToDto(boardEntity);
 }
     public Integer[] getPageList(Integer curPageNum) {
+
         Integer[] pageList = new Integer[BLOCK_PAGE_NUM_COUNT];
 
         // 총 게시글 갯수

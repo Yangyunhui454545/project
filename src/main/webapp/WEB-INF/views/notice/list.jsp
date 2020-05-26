@@ -7,8 +7,8 @@
 <head>
 
 
-    <link href="css/tave.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/tave.css" rel="stylesheet" />
+    <link href="/css/bootstrap.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-wdith", initial-scale="1">
 
@@ -24,8 +24,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="introTaveMembers.html">운영진 소개</a></li>
-                        <li><a href="sponsor.html">후원사</a></li>
+                        <li><a href="${cp}/about/introTaveMembers">운영진 소개</a></li>
+                        <li><a href="sponsor">후원사</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -85,10 +85,13 @@
         </tbody>
     </table>
     <a  href="${cp}/write" class="btn btn-primary">글쓰기</a>
+
     <div>
-    <span th:each="pageNum : ${pageList}" th:inline="text">
-        <a th:href="@{'/?page=' + ${pageNum}}" style="color: black">[[${pageNum}]]</a>
-    </span>
+        [[[[
+    <c:forEach var= "pageNum" items = "${pageList}">
+        <a href="@{'/?page=' + ${pageNum}}" style="color: black">${pageNum}</a>
+    </c:forEach>
+        ]]
     </div>
     <div class="container">
 

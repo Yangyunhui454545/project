@@ -19,7 +19,7 @@ public class HomeController {
 
     @RequestMapping(value = "/")
     public String index() {
-        return "index";
+        return "member/index";
     }
 
 /*
@@ -40,12 +40,12 @@ public class HomeController {
 
         model.addAttribute("member",member);
 
-        return "joinForm";
+        return "member/joinForm";
     }
 
     @GetMapping(value = "/loginForm")
     public String loginForm() {
 
-        return "loginForm";
+        return "member/loginForm";
     }
 }

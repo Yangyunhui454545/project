@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-
 @Controller
 @AllArgsConstructor
 public class BoardController {
@@ -30,11 +29,11 @@ public class BoardController {
         model.addAttribute("boardList", boardList);
         model.addAttribute("pageList", pageList);
 
-        return "list";
+        return "notice/list";
     }
     @GetMapping("/write")
     public String write() {
-        return "write";
+        return "notice/write";
     }
 
     @PostMapping("/write")
@@ -49,7 +48,27 @@ public class BoardController {
         BoardDto boardDTO = boardService.getPost(no);
 
         model.addAttribute("boardDto", boardDTO);
-        return "detail";
+        return "notice/detail";
     }
+    /*게시글 수정하기*/
+    @GetMapping("/update/{no}")
+    public String update(@PathVariable("no") Long no, Model model) {
+        BoardDto boardDTO = boardService.getPost(no);
+
+        model.addAttribute("boardDto", boardDTO);
+        return "notice/update";
+    }
+
+    @RequestMapping("/update/{no}")
+    public String update(BoardDto boardDTO) {
+        boardService.savePost(boardDTO);
+
+        return "redirect:/";
+    }
+    @GetMapping("/introTaveMembers")
+    public String introTaveMembers() {
+        return "about/introTaveMembers";
+    }
+
 
 }

@@ -1,13 +1,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <% String cp = request.getContextPath(); %>
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-
-
-    <link href="css/tave.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="${cp}/static/css/tave.css" rel="stylesheet" />
+    <link href="${cp}/static/css/bootstrap.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-wdith", initial-scale="1">
 
@@ -48,32 +47,37 @@
     </div>
 </nav>
 
-<div class="container">
-    <div class="row" style="white-space:pre;">
-        <form  action="/write" method="post">
+
+    <div class="container">
+        <div class="row" style="white-space:pre;">
             <table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
                 <thead>
                 <tr>
-                    <th colspan="2" style="background-color: #eeeeee; text-align: center;">작성하기</th>
+                    <th colspan="3" style="background-color: #eeeeee; text-align: center; font-size: 25px; font-style: bold;"> ${boardDto.title}</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" placeholder="제목" name="title" maxlength="50"/></td>
+                    <td style="width: 50%;"></td>
+                    <td align="right" style="width: 40%;"> ${boardDto.writer}</td>
+                    <td>${boardDto.createdDate}"></td>
                 </tr>
                 <tr>
-                    <td><input type="text" class="form-control" placeholder="작성자" name="writer" maxlength="50"/></td>
+                    <td colspan="3" style="min-height: 200px; text-align: left; padding: 70px 60px; font-size: 20px;">${boardDto.content}</td>
                 </tr>
                 <tr>
-                    <td><textarea class="form-control" placeholder="내용" name="content" maxlength="2048" style="height: 350px;"></textarea></td>
+                    <td colspan="3" style="min-height:200px; text-align:left"></td>
                 </tr>
                 </tbody>
             </table>
-            <input type="submit" class="btn btn-primary pull-right" value="글쓰기" />
-        </form>
-    </div>
-</div>
 
+            <!-- 수정/삭제 -->
+
+            <a href="${cp}/update/${boardDto.id}" class="btn btn-primary">수정</a>  <a href="" class="btn btn-primary">삭제</a>
+        </div>
+    </div>
+    <br>
+</div>
 <!-- Footer -->
 <footer class="footer text-center">
     <div class="container">

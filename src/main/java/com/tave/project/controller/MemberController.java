@@ -41,7 +41,7 @@ public class MemberController {
     // Join
     @RequestMapping("/joinForm")
     public String joinForm(Member member) {
-        return "/joinForm";
+        return "member/joinForm";
     }
 
     @RequestMapping(value = "/join", method = RequestMethod.POST)
@@ -49,7 +49,7 @@ public class MemberController {
 
         service.memberRegister(member);
 
-        return "/joinOk";
+        return "member/joinOk";
     }
 
     // Login
