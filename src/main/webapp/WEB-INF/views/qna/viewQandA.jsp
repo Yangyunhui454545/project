@@ -17,7 +17,7 @@
 		</style>
 	</head>
 	<body>
-		<%@ include file=navigation.jsp" %>
+		<%@ include file="/navigation.jsp" %>
 
 		<div class="container">
 		<div class="row">
@@ -49,7 +49,7 @@
 
 		<br>
 
-		<%@ include file=footer.jsp" %>
+		<%@ include file="/footer.jsp" %>
 
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script src="js/bootstrap.js"></script>

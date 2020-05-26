@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width-device-wdith", initial-scale="1">
 
@@ -15,12 +16,12 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand js-scroll-trigger" href="index">TAVE</a>
+            <a class="navbar-brand js-scroll-trigger" href="${cp}/">TAVE</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+                    <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="${cp}/about/introTaveMembers">운영진 소개</a></li>
                         <li><a href="${cp}/about/sponsor">후원사</a></li>

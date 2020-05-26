@@ -1,12 +1,10 @@
 package com.tave.project.controller;
-
 import com.tave.project.Service.BoardService;
 import com.tave.project.dto.BoardDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
@@ -21,7 +19,7 @@ public class BoardController {
     }
 
     /* 게시글 목록 */
-    @GetMapping("/list")
+    @GetMapping("/notice/list")
     public String list(Model model, @RequestParam(value="page", defaultValue = "1") Integer pageNum) {
         List<BoardDto> boardList = boardService.getBoardlist(pageNum);
         Integer[] pageList = boardService.getPageList(pageNum);

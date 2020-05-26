@@ -19,7 +19,7 @@ public class HomeController {
 
     @RequestMapping(value = "/")
     public String index() {
-        return "member/index";
+        return "index";
     }
 
 /*
@@ -64,28 +64,23 @@ public class HomeController {
     public String sponsor() {
         return "about/sponsor";
     }
-    //공지
-    @GetMapping("/notion")
-    public String notion() {
-        return "notion/list";
-    }
     //활동
-    @GetMapping("/activity")
+    @GetMapping("/activity/activity")
     public String activity() {
         return "activity/activity";
     }
     //출결 관리
-    @GetMapping("/attendance")
+    @GetMapping("/attendance/attendance")
     public String attendance() {
         return "attendance/attendance";
     }
     //진행 사항
-    @GetMapping("/progress")
+    @GetMapping("/progress/progress")
     public String progress() {
         return "progress/progress";
     }
     //활동 후기
-    @GetMapping("/review")
+    @GetMapping("/review/review")
     public String review() {
         return "review/review";
     }
@@ -95,7 +90,7 @@ public class HomeController {
         return "recruit";
     }
     //qna
-    @GetMapping("/qna")
+    @GetMapping("/qanda/QandA")
     public String qna() {
         return "qna/QandA";
     }
