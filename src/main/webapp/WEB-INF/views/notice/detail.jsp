@@ -8,7 +8,6 @@
     <link href="${cp}/static/css/tave.css" rel="stylesheet" />
     <link href="${cp}/static/css/bootstrap.css" rel="stylesheet" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-wdith", initial-scale="1">
 
 </head>
 <body>

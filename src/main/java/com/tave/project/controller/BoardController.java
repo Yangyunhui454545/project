@@ -21,7 +21,7 @@ public class BoardController {
     }
 
     /* 게시글 목록 */
-    @GetMapping("/")
+    @GetMapping("/list")
     public String list(Model model, @RequestParam(value="page", defaultValue = "1") Integer pageNum) {
         List<BoardDto> boardList = boardService.getBoardlist(pageNum);
         Integer[] pageList = boardService.getPageList(pageNum);
@@ -65,10 +65,7 @@ public class BoardController {
 
         return "redirect:/";
     }
-    @GetMapping("/introTaveMembers")
-    public String introTaveMembers() {
-        return "about/introTaveMembers";
-    }
+
 
 
 }

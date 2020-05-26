@@ -6,10 +6,9 @@
 <head>
 
 
-    <link href="../../../../resources/static/css/tave.css" rel="stylesheet" />
-    <link href="../../../../resources/static/css/bootstrap.css" rel="stylesheet" />
+    <link href="${cp}/css/tave.css" rel="stylesheet" />
+    <link href="${cp}/css/bootstrap.css" rel="stylesheet" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width-device-wdith", initial-scale="1">
 
 </head>
 <body>
