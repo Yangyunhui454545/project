@@ -5,50 +5,48 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <link href="${cp}/static/css/tave.css" rel="stylesheet" />
-    <link href="${cp}/static/css/bootstrap.css" rel="stylesheet" />
-    <meta charset="UTF-8">
+    <link rel="stylesheet" href="${cp}/css/bootstrap.css">
+    <link rel="stylesheet" href="${cp}/css/tave.css">
+    <link rel="stylesheet" href="${cp}/css/board.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <%@include file="/navigation.jsp"%>
 
-    <div class="container">
-        <div class="row" style="white-space:pre;">
-            <table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
-                <thead>
-                <tr>
-                    <th colspan="3" style="background-color: #eeeeee; text-align: center; font-size: 25px; font-style: bold;"> ${boardDto.title}</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td style="width: 50%;"></td>
-                    <td align="right" style="width: 40%;"> ${boardDto.writer}</td>
-                    <td>${boardDto.createdDate}"></td>
-                </tr>
-                <tr>
-                    <td colspan="3" style="min-height: 200px; text-align: left; padding: 70px 60px; font-size: 20px;">${boardDto.content}</td>
-                </tr>
-                <tr>
-                    <td colspan="3" style="min-height:200px; text-align:left"></td>
-                </tr>
-                </tbody>
-            </table>
+<div class="container">
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th colspan="3" class="viewTitle">${boardDto.title}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
 
-            <!-- 수정/삭제 -->
-
-            <a href="${cp}/update/${boardDto.id}" class="btn btn-primary">수정</a>  <a href="" class="btn btn-primary">삭제</a>
-        </div>
+                <td class="temp"></td>
+                <td align="right" class="viewWriter">${boardDto.writer}</td>
+                <td>${boardDto.createdDate}</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="min-height: 200px; text-align: left; padding: 70px 60px; font-size: 20px;">${boardDto.content}</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="min-height:200px; text-align:left"></td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="${cp}/update/${boardDto.id}" class="btn btn-primary" align="left">수정</a>
+        <a href="${cp}/delete" class="btn btn-primary" align="left">삭제</a>
     </div>
-    <br>
 </div>
+<br>
+
 <%@include file="/footer.jsp"%>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="../js/bootstrap.js"></script>
-</div>
-</div>
-</div>
+
 </body>
 </html>

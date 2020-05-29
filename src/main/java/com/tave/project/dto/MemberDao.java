@@ -9,9 +9,9 @@ import java.sql.*;
 public class MemberDao implements com.tave.project.dto.IMemberDao {
 
     private String driver = "com.mysql.jdbc.Driver";
-    private String url = "jdbc:mysql://localhost:3306/mem?serverTimezone=UTC";
+    private String url = "jdbc:mysql://localhost:3306/sqldb?serverTimezone=UTC";
     private String userid = "root";
-    private String userpw = "root";
+    private String userpw = "1234";
 
     private Connection conn = null;
     private PreparedStatement pstmt = null;
@@ -25,7 +25,7 @@ public class MemberDao implements com.tave.project.dto.IMemberDao {
         try {
             Class.forName(driver);
             conn = DriverManager.getConnection(url, userid, userpw);
-            String sql = "INSERT INTO register (memId, memPw, Phone) values (?,?,?)";
+            String sql = "INSERT INTO register(memId, memPw, Phone) values(?,?,?)";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, member.getMemId());
             pstmt.setString(2, member.getMemPw());
@@ -71,7 +71,7 @@ public class MemberDao implements com.tave.project.dto.IMemberDao {
                 mem.setMemId(memId);
                 mem.setMemPw(memPw);
                 mem.setPhone(Phone);
-                mem.setnum(num);
+                mem.setNum(num);
             }
 
         } catch (ClassNotFoundException e) {

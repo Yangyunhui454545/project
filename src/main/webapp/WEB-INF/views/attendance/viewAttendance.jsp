@@ -1,56 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% String cp = request.getContextPath(); %>
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width-device-wdith", initial-scale="1">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" href="${cp}/css/bootstrap.css">
+	<link rel="stylesheet" href="${cp}/css/tave.css">
+	<link rel="stylesheet" href="${cp}/css/board.css">
 
-		<title>출결</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<%@include file="/navigation.jsp"%>
 
-		<link rel="stylesheet" href="${cp}/css/bootstrap.css">
-		<link rel="stylesheet" href="${cp}/css/tave.css">
-		<link rel="stylesheet" href="${cp}/css/board.css">
+<div class="container">
+	<div class="row">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<th colspan="3" class="viewTitle">${boardDto.title}</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<%@ include file="/navigation.jsp" %>
+				<td class="temp"></td>
+				<td align="right" class="viewWriter">${boardDto.writer}</td>
+				<td>${boardDto.createdDate}</td>
+			</tr>
+			<tr>
+				<form action ="add?pageNum = ${param.pageNum}" method="post" class="btn btn-primary" enctype ="multipart/form-data"
+					  onsubmit="return check()" name = "fm" >
+					<input type = "file" name = "file"/>
+				</form>
+			</tr>
+			<tr>
+				<td colspan="3" style="min-height:200px; text-align:left"></td>
+			</tr>
+			</tbody>
+		</table>
+		<a href="${cp}/delete" class="btn btn-primary" align="left">삭제</a>
+	</div>
+</div>
+<br>
 
-		<div class="container">
-		<div class="row">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th colspan="3" class="viewTitle">도너츠이야기</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<!--
-							<td style="width: 20%;"> 글 제목 </td>
-							<td></td>
-							-->
-							<td class="temp"></td>
-							<td align="right" class="viewWriter">최인아</td>	
-							<td>1998-05-02</td>	
-						</tr>
-						<tr>
-							<td colspan="3" align="left">
-								<a href="file/test.pdf" class="btn btn-primary">파일 다운받기</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>	
-				<a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary" align="left">수정</a>
-				<a href="delete.jsp?bbsID=<%= bbsID %>" class="btn btn-primary" align="left">삭제</a>
-		</div>
-		</div>
+<%@include file="/footer.jsp"%>
 
-		<br>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../js/bootstrap.js"></script>
 
-		<%@ include file="/footer.jsp" %>
-
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
-	</body>
+</body>
 </html>

@@ -1,8 +1,8 @@
 package com.tave.project.controller;
 
-import com.tave.project.dto.MemberDao;
+import com.tave.project.Service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class HomeController {
+
+    @Autowired
+    MemberService service;
 
     @ModelAttribute("cp")
     public String getContextPath(HttpServletRequest request) {
@@ -22,32 +25,6 @@ public class HomeController {
         return "index";
     }
 
-/*
-   @RequestMapping(value="joinForm", method = {RequestMethod.GET, RequestMethod.POST})
-   public String join (Model model) {
-      MemberDao member = new MemberDao();
-
-      model.addAttribute("member",member);
-
-      return "joinFrom";
-   }*/
-
-
-    @GetMapping(value = "/joinForm")
-    public String join(Model model) {
-
-        MemberDao member = new MemberDao();
-
-        model.addAttribute("member",member);
-
-        return "member/joinForm";
-    }
-
-    @GetMapping(value = "/loginForm")
-    public String loginForm() {
-
-        return "member/loginForm";
-    }
 
     //메인화면
     @GetMapping("/")
@@ -64,30 +41,10 @@ public class HomeController {
     public String sponsor() {
         return "about/sponsor";
     }
-    //활동
-    @GetMapping("/activity/activity")
-    public String activity() {
-        return "activity/activity";
-    }
-    //출결 관리
-    @GetMapping("/attendance/attendance")
-    public String attendance() {
-        return "attendance/attendance";
-    }
-    //진행 사항
-    @GetMapping("/progress/progress")
-    public String progress() {
-        return "progress/progress";
-    }
-    //활동 후기
-    @GetMapping("/review/review")
-    public String review() {
-        return "review/review";
-    }
     //recruit
     @GetMapping("/recruit")
     public String recruit() {
-        return "recruit";
+        return "/recruit";
     }
     //qna
     @GetMapping("/qanda/QandA")

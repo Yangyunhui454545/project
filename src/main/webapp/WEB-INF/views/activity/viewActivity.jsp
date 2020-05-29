@@ -1,59 +1,64 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width-device-wdith", initial-scale="1">
+<html lang="en" >
+<head>
 
-		<title>활동</title>
+	<title>활동</title>
 
-		<link rel="stylesheet" href="${cp}/css/bootstrap.css">
-		<link rel="stylesheet" href="${cp}/css/tave.css">
-		<link rel="stylesheet" href="${cp}/css/board.css">
+	<link href="${cp}/css/tave.css" rel="stylesheet" />
+	<link href="${cp}/css/bootstrap.css" rel="stylesheet" />
+	<link href="${cp}/css/board.css" rel="stylesheet" />
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<%@ include file="/navigation.jsp" %>
+	<meta charset="UTF-8">
+</head>
+<body>
 
-		<div class="container">
-				<div class="row">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th colspan="3" class="viewTitle">도너츠이야기</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<!--
-							<td style="width: 20%;"> 글 제목 </td>
-							<td></td>
-							-->
-							<td class="temp"></td>
-							<td align="right" class="viewWriter">최인아</td>	
-							<td>1998-05-02</td>	
-						</tr>
-						<tr>
-							<td colspan="3" class="viewText"></td>
-						</tr>
-						<tr>
-							<td colspan="3" align="left">
-								<a href="file/test.pdf" class="btn btn-primary">파일 다운받기</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>	
-				<a href="update.jsp?bbsID=<%= bbsID %>" class="btn btn-primary" align="left">수정</a>
-				<a href="delete.jsp?bbsID=<%= bbsID %>" class="btn btn-primary" align="left">삭제</a>
-		</div>
-		</div>
+<%@ include file="/navigation.jsp" %>
 
-		<br>
+<div class="container">
+	<div class="row">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<th colspan="3" class="viewTitle">도너츠이야기</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<!--
+                <td style="width: 20%;"> 글 제목 </td>
+                <td></td>
+                -->
+				<td class="temp"></td>
+				<td align="right" class="viewWriter">최인아</td>
+				<td>1998-05-02</td>
+			</tr>
+			<tr>
+				<td colspan="3" class="viewText"></td>
+			</tr>
+			<tr>
+				<td colspan="3" align="left">
+					<a href="file/test.pdf" class="btn btn-primary">파일 다운받기</a>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<a class="btn btn-primary" align="left">수정</a>
+		<a class="btn btn-primary" align="left">삭제</a>
+	</div>
+</div>
 
-		<%@ include file="/footer.jsp" %>
+<br>
 
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
-	</body>
+<%@ include file="/footer.jsp" %>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+</div>
+</div>
+</div>
+</body>
 </html>

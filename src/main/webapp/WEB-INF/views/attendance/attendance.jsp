@@ -1,63 +1,61 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width-device-wdith", initial-scale="1">
+<html lang="en" >
+<head>
 
-		<title>출결 관리</title>
 
-		<link rel="stylesheet" href="${cp}/css/bootstrap.css">
-		<link rel="stylesheet" href="${cp}/css/tave.css">
-		<link rel="stylesheet" href="${cp}/css/board.css">
+	<link href="${cp}/css/tave.css" rel="stylesheet" />
+	<link href="${cp}/css/bootstrap.css" rel="stylesheet" />
+	<link href="${cp}/css/board.css" rel="stylesheet" />
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<%@ include file="/navigation.jsp" %>
-		
-		<div class="container">
-			<div class="row">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>번호</th>
-							<th>제목</th>
+	<meta charset="UTF-8">
+</head>
+<body>
 
-							<th>작성자</th>
-							<th>작성일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
+<%@ include file="/navigation.jsp" %>
 
-							<td><%=list.get(i).getBbsID()%></td>
+<div class="container">
+	<div class="row">
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
 
-							<td><a href="viewAttendance.html?bbsID=<%=list.get(i).getBbsID()%>"><%=list.get(i).getBbsTitle()%></a></td>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- CONTENTS !-->
+			<c:forEach var="photo" items="${attendanceDtoList}">
 
-							<td><%=list.get(i).getUserID()%></td>
+				<tr>
+					<td> ${photo.id} </td>
+					<td> <a href = "${cp}/viewAttendance/${photo.id}"  style = "color: black"> ${photo.title}</a> </td>
 
-							<td><%=list.get(i).getBbsDate().substring(0, 11) + list.get(i).getBbsDate().substring(11, 13) + "시"
+				</tr>
+			</c:forEach>
+			</tbody>
+		</table>
+		<a  href="${cp}/attendance/writeAttendance" class="btn btn-primary">글쓰기</a>
 
-							+ list.get(i).getBbsDate().substring(14, 16) + "분"%></td>
 
-						</tr>
-						<%
-
-							}
-
-						%>
-					</tbody>
-				</table>
-				<a href="writeAttendance.html?bbsID=<%= bbsID %>" class="btn btn-primary">글쓰기</a>
-			</div>
+		<div>
+			[[
+			<c:forEach var= "pageNum" items = "${pageList}">
+				<a href="@{'/?page=' + ${pageNum}}" style="color: black">${pageNum}</a>
+			</c:forEach>
+			]]
 		</div>
+	</div>
+</div>
 
-		<br>
+<%@ include file="/footer.jsp" %>
 
-		<%@ include file="/footer.jsp" %>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../js/bootstrap.js"></script>
 
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
-	</body>
+</body>
 </html>

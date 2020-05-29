@@ -1,23 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width-device-wdith", initial-scale="1">
+<html lang="en" >
+<head>
 
-		<title>후원사</title>
+	<title>후원사</title>
 
-		<link rel="stylesheet" href="${cp}/css/bootstrap.css">
-		<link rel="stylesheet" href="${cp}/css/tave.css">
+	<link href="${cp}/css/tave.css" rel="stylesheet" />
+	<link href="${cp}/css/bootstrap.css" rel="stylesheet" />
+	<meta charset="UTF-8">
+</head>
+<body>
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<%@ include file="/navigation.jsp" %>
-		
-		<%@ include file="/footer.jsp" %>
+<%@ include file="/navigation.jsp" %>
 
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="js/bootstrap.js"></script>
-	</body>
+
+
+<%@ include file="/footer.jsp" %>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+
+</body>
 </html>

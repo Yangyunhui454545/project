@@ -37,12 +37,27 @@
                         <li><a href="${cp}/review/review">활동 후기</a></li>
                     </ul>
                 </li>
-                <li><a href="${cp}/recruit/recruit">Recruit<span class="sr-only"></span></a></li>
+                <li><a href="${cp}/recruit">Recruit<span class="sr-only"></span></a></li>
                 <li><a href="${cp}/qanda/QandA">Q&A<span class="sr-only"></span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="loginForm">Sign In</a></li>
-                <li><a href="registerForm">Sign Up</a></li>
+                <%
+                    if(session.getAttribute("member")==null){
+                //response.sendRedirect("member/LoginForm");
+                %>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="${cp}/member/loginForm">Sign In</a></li>
+                    <li><a href="${cp}/member/joinForm">Sign Up</a></li>
+                </ul>
+                <%}
+
+                    else{
+                %>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="${cp}/member/logoutForm">logout</a></li>
+                    <li><a href="${cp}/member/modifyForm">mypage</a></li>
+                </ul>
+                <%}%>
             </ul>
         </div>
     </div>

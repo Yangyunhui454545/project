@@ -25,10 +25,10 @@ public class Member {
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
-    public int getnum() {
+    public int getNum() {
         return num;
     }
-    public void setnum(int num) {
+    public void setNum(int num) {
         this.num = num;
     }
 }

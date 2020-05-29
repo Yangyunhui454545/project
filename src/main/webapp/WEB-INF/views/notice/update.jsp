@@ -11,8 +11,7 @@
 
 </head>
 <body>
-<%@include file="/navigation.jsp"%>
-
+<%@include file="/navigation.jsp" %>
 <div class="container">
     <div class="row">
         <form  action="${cp}/update/${boardDto.id}" method="post">
@@ -32,7 +31,7 @@
                     <td><input type="text" class="form-control" value="${boardDto.writer}" name="writer" maxlength="50"/></td>
                 </tr>
                 <tr>
-                    <td><textarea class="form-control" text="${boardDto.content}" name="content" maxlength="2048" style="height: 350px;"></textarea></td>
+                    <td><textarea class="form-control" name="content" maxlength="2048" style="height: 350px;">${boardDto.content} </textarea></td>
                 </tr>
                 </tbody>
             </table>
