@@ -3,16 +3,11 @@ package com.tave.project.controller;
 import com.tave.project.Service.BoardService;
 import com.tave.project.dto.BoardDto;
 import lombok.AllArgsConstructor;
-import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.List;
 
 @Controller
@@ -49,28 +44,8 @@ public class BoardController {
         model.addAttribute("pageList", pageList);
         return "activity/activity";
     }
-    //진행 사항
-    @GetMapping("/progress/progress")
-    public String progress(Model model, @RequestParam(value="page", defaultValue = "1") Integer pageNum) {
-        List<BoardDto> boardList = boardService.getBoardlist(pageNum);
-        Integer[] pageList = boardService.getPageList(pageNum);
 
-        model.addAttribute("boardList", boardList);
-        model.addAttribute("pageList", pageList);
-        return "progress/progress";
-    }
-    //활동 후기
-    @GetMapping("/review/review")
-    public String review(Model model, @RequestParam(value="page", defaultValue = "1") Integer pageNum){
-
-        List<BoardDto> boardList = boardService.getBoardlist(pageNum);
-        Integer[] pageList = boardService.getPageList(pageNum);
-
-        model.addAttribute("boardList", boardList);
-        model.addAttribute("pageList", pageList);
-        return "review/review";
-    }
-
+    /*게시글 작성*/
     @GetMapping("/write")
     public String write() {
         return "notice/write";

@@ -65,14 +65,13 @@ public class AttendanceController {
 
         return "redirect:/attendance/attendance";
     }
-
     /* 게시글 상세 */
     @GetMapping("/viewAttendance/{no}")
     public String detail(@PathVariable("no") Long no, Model model) {
         AttendanceDto attendanceDto = photoService.getPost(no);
 
         model.addAttribute("attendanceDto", attendanceDto);
-        return "notice/detail";
+        return "attendance/viewAttendance";
     }
 
 }

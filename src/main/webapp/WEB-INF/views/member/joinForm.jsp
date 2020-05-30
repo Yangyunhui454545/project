@@ -11,8 +11,10 @@
 
 	<title>Sign Up</title>
 
-	<link rel="stylesheet" href="../css/bootstrap.css">
-	<link rel="stylesheet" href="../css/tave.css">
+	<link rel="stylesheet" href="${cp}/css/bootstrap.css">
+	<link rel="stylesheet" href="${cp}/css/tave.css">
+	<link rel="stylesheet" href="${cp}/css/form.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<style>
 		body {
@@ -125,19 +127,26 @@
 
 </head>
 <body>
-<%@include file="/navigation.jsp"%>
 
-<form:form action="${cp}/member/joinForm" method="post" modelAttribute="member">
+<%@include file="/navigation.jsp"%>
 
 	<div class="container">
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="col-lg-12">
+					<form:form action="${cp}/member/join" method="post" modelAttribute="member">
 					<h2>TAVE 회원 가입</h2>
 					<label>
 						<p class="label-txt">이름</p>
 						<form:input type="text" class="input" name="id" path="memId"/>
 						<!--  <input type="text" class="input" id="name">-->
+						<div class="line-box">
+							<div class="line"></div>
+						</div>
+					</label>
+					<label>
+						<p class="label-txt">닉네임 (기수 + 이름 -> 5기 최인아)</p>
+						<input type="text" class="input" name = "nickName" id="nickName">
 						<div class="line-box">
 							<div class="line"></div>
 						</div>
@@ -164,29 +173,21 @@
 						</div>
 					</label>
 					<label>
-						<p class="label-txt">기수</p>
-						<form:input type ="int" class="input" path="num" />
-						<!--  <input type="text" class="input" id="num">-->
-						<div class="line-box">
-							<div class="line"></div>
-						</div>
-					</label>
-					<label>
 						<input type="radio"  name="chk_info" value="운영진">운영진 &nbsp;
 						<input type="radio"  name="chk_info" value="OB">OB &nbsp;
 						<input type="radio" name="chk_info" value="YB">YB &nbsp;
 					</label>
+						<br><br>
 					<button type="submit">제출</button>
 					<button type="submit" onclick="goLoginForm()">취소</button>
 
-
+					</form:form>
 				</div>
 			</div>
 		</div>
 	</div>
-</form:form>
-<%@ include file="/footer.jsp"%>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="../../../../resources/static/js/bootstrap.js"></script>
+
+
+<%@include file="/footer.jsp"%>
 </body>
 </html>

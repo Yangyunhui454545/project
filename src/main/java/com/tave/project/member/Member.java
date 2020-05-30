@@ -5,7 +5,7 @@ public class Member {
     private String memId;
     private String memPw;
     private String Phone;
-    private int num;
+    private String nickName;
 
     public String getMemId() {
         return memId;
@@ -25,10 +25,10 @@ public class Member {
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
-    public int getNum() {
-        return num;
+    public String getnickName() {
+        return nickName;
     }
-    public void setNum(int num) {
-        this.num = num;
+    public void setnickName(String nickName) {
+        this.nickName = nickName;
     }
 }

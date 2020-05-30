@@ -33,12 +33,11 @@
                         <li><a href="${cp}/notice/list">공지</a></li>
                         <li><a href="${cp}/activity/activity">활동</a></li>
                         <li><a href="${cp}/attendance/attendance">출결 관리</a></li>
-                        <li><a href="${cp}/progress/progress">진행 상황</a></li>
-                        <li><a href="${cp}/review/review">활동 후기</a></li>
+                        <li><a href="${cp}/progress">진행 상황</a></li>
                     </ul>
                 </li>
                 <li><a href="${cp}/recruit">Recruit<span class="sr-only"></span></a></li>
-                <li><a href="${cp}/qanda/QandA">Q&A<span class="sr-only"></span></a></li>
+                <li><a href="${cp}/mail">Q&A<span class="sr-only"></span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <%
@@ -55,7 +54,7 @@
                 %>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="${cp}/member/logoutForm">logout</a></li>
-                    <li><a href="${cp}/member/modifyForm">mypage</a></li>
+                    <li><a href="${cp}/member/myPage">mypage</a></li>
                 </ul>
                 <%}%>
             </ul>

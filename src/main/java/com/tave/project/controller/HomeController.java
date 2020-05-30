@@ -41,6 +41,9 @@ public class HomeController {
     public String sponsor() {
         return "about/sponsor";
     }
+    //진행 사항
+    @GetMapping("/progress")
+    public String progress(){ return "/progress"; }
     //recruit
     @GetMapping("/recruit")
     public String recruit() {
@@ -49,7 +52,7 @@ public class HomeController {
     //qna
     @GetMapping("/qanda/QandA")
     public String qna() {
-        return "qna/QandA";
+        return "mail";
     }
 
 

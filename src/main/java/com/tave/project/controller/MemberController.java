@@ -103,4 +103,22 @@ public class MemberController {
         System.out.println("modify");
         return mav;
     }
+    // Modify
+    @GetMapping(value = "member/myPage")
+    public ModelAndView mypage(HttpServletRequest request, Model model) {
+
+        HttpSession session = request.getSession();
+        Member member = (Member)session.getAttribute("member");
+
+        //String memberID = (String)session.getAttribute("member");
+
+        //model.getAttribute("member",memberID);
+
+        ModelAndView mav = new ModelAndView();
+        mav.addObject("member", service.memberSearch(member));
+
+        mav.setViewName("/member/myPage");
+        System.out.println("myPage");
+        return mav;
+    }
 }

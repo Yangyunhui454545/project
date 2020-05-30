@@ -14,35 +14,27 @@
 <body>
 <%@include file="/navigation.jsp"%>
 
+
 <div class="container">
 	<div class="row">
 		<table class="table table-striped">
 			<thead>
 			<tr>
-				<th colspan="3" class="viewTitle">${AttendanceDto.title}</th>
+				<th colspan="3" class="viewTitle">${attendanceDto.title}</th>
 			</tr>
 			</thead>
 			<tbody>
-			<tr>
 
-				<td class="temp"></td>
-				<td align="right" class="viewWriter">${AttendanceDto.writer}</td>
-			</tr>
 			<tr>
-				<form action ="add?pageNum = ${param.pageNum}" method="post" class="btn btn-primary" enctype ="multipart/form-data"
-					  onsubmit="return check()" name = "fm" >
-					<input type = "file" name = "file"/>
-				</form>
-			</tr>
-			<tr>
-				<td colspan="3" style="min-height:200px; text-align:left"></td>
+				<td colspan="3" align="left">파일 다운로드  <a href="${attendanceDto.filename}" class="btn btn-primary" >${attendanceDto.filename}</a>
+				</td>
 			</tr>
 			</tbody>
 		</table>
-		<a href="${cp}/delete" class="btn btn-primary" align="left">삭제</a>
 	</div>
 </div>
-<br>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 <%@include file="/footer.jsp"%>
 

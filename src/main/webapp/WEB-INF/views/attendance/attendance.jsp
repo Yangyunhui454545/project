@@ -35,7 +35,7 @@
 
 				<tr>
 					<td class="list"> ${photo.id} </td>
-					<td class="list"> <a href = "${cp}/viewAttendance/${photo.title}"  style = "color: black"> ${photo.title}</a> </td>
+					<td class="list"> <a href = "${cp}/viewAttendance/${photo.id}"  style = "color: black"> ${photo.title}</a> </td>
 
 				</tr>
 			</c:forEach>

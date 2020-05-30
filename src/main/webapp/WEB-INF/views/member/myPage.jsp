@@ -1,138 +1,75 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<% String cp = request.getContextPath(); %> <%--ContextPath 선언 --%>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width-device-wdith", initial-scale="1">
+<head>
+	<meta charset="UTF-8">
 
-		<title>My Page</title>
+	<title>My Page</title>
 
-		<link rel="stylesheet" href="../../../../resources/static/css/bootstrap.css">
-		<link rel="stylesheet" href="../../../../resources/static/css/tave.css">
-		<link rel="stylesheet" href="../../../../resources/static/css/form.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="${cp}/css/tave.css" rel="stylesheet" />
+	<link href="${cp}/css/bootstrap.css" rel="stylesheet" />
+	<link href="${cp}/css/form.css" rel="stylesheet" />
 
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	</head>
-	<body>
-		<nav class="navbar navbar-default">
-		    <div class="container-fluid">
-		    	<div class="navbar-header">
-		      		<a class="navbar-brand js-scroll-trigger" href="index.html">TAVE</a>
-		  		</div>
-		  		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			        <ul class="nav navbar-nav">
-			            <li class="dropdown">
-			              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
-			              <ul class="dropdown-menu">
-			                <li><a href="introTaveMembers.html">운영진 소개</a></li>
-			                <li><a href="sponsor.html">후원사</a></li>
-			              </ul>
-			            </li>
-			            <li class="dropdown">
-			              <a href="boardList.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Board<span class="caret"></span></a>
-			              <ul class="dropdown-menu">
-			                <li><a href="notice.html">공지</a></li>
-			                <li><a href="activity.html">활동</a></li>
-			                <li><a href="attendance.html">출결 관리</a></li>
-			                <li><a href="progress.html">진행 상황</a></li>
-			                <li><a href="review.html">활동 후기</a></li>
-			              </ul>
-			            </li>
-			            <li><a href="recruit.html">Recruit<span class="sr-only"></span></a></li>
-			            <li><a href="QandA.html">Q&A<span class="sr-only"></span></a></li>
-			        </ul>
-			        <ul class="nav navbar-nav navbar-right">
-			        	<li><a href="loginForm.html">Sign In</a></li>
-			        	<li><a href="registerForm.html">Sign Up</a></li>
-			        </ul>
-			    </div>
-			</div>
-		</nav>
+	<style>
+		.line-box {
+			background: #0066CC;
+		}
+	</style>
+</head>
+<body>
+<%@ include file="/navigation.jsp" %>
 
-		<div class="container">
-    	<div class="row">
+<form:form action="${cp}/member/modifyForm" method="post" modelAttribute="member">
+
+	<div class="container">
+		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div class="col-lg-12">
-					<form>
-						<h2>TAVE 회원 가입</h2>
-							<label>
-								<p class="label-txt">이름</p>
-								<input type="text" class="input" id="name">
-								<div class="line-box">
-									<div class="line"></div>
-								</div>
-							</label>
-							<label>
-								<p class="label-txt">닉네임 (기수 + 이름 -> 5기 최인아)</p>
-								<input type="text" class="input" id="nickName">
-								<div class="line-box">
-									<div class="line"></div>
-								</div>
-							</label>
-							<label>
-								<p class="label-txt">비밀번호 변경</p>
-								<input type="password" class="input" id="password">
-								<div class="line-box">
-									<div class="line"></div>
-								</div>
-							</label>
-							<label>
-								<p class="label-txt">비밀번호 확인</p>
-								<input type="password" class="input" id="passwordCheck">
-								<div class="line-box">
-									<div class="line"></div>
-								</div>
-							</label>
-							<label>
-								<p class="label-txt">- 없이 휴대폰 번호</p>
-								<input type="text" class="input" id="phoneNumber">
-								<div class="line-box">
-									<div class="line"></div>
-								</div>
-							</label>
-							<button type="submit">Submit</button>
-						</form>
-					</div>
+
+					<form:hidden path="memId" value="${member.memId}"/>
+					<form:hidden path="memPw" value="${member.nickName}"/>
+					<form:hidden path="phone" value="${member.phone}"/>
+					<h2>개인 정보</h2>
+					<label>
+						<p class="label-txt">이름</p>
+						<input type="text" class="input" id="name" disabled>
+							${member.memId}
+						<div class="line-box">
+							<div class="line"></div>
+						</div>
+					</label>
+					<label>
+						<p class="label-txt">닉네임 (기수 + 이름 -> 5기 테이비)</p>
+						<input type="text" class="input" id="nickName" disabled>
+							${member.nickName}
+						<div class="line-box">
+							<div class="line"></div>
+						</div>
+					</label>
+					<label>
+						<p class="label-txt">- 없이 휴대폰 번호</p>
+						<input type="text" class="input" id="phoneNumber" disabled>
+							${member.phone}
+						<div class="line-box">
+							<div class="line"></div>
+						</div>
+					</label>
+					<button type="submit">수정하기</button>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<br>
+	<br>
+</form:form>
 
-		<!-- Footer -->
-		<footer class="footer text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 mb-5 mb-lg-0">
-						<h4 class="text-uppercase mb-4">회장</h4>
-						<p class="lead mb-0">박세일</p>
-			        </div>
+<%@ include file="/footer.jsp" %>
 
-			        <div class="col-lg-4 mb-5 mb-lg-0">
-			          <h4 class="text-uppercase mb-4">Social Network</h4>
-			          <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/TechnologywaAVE/">
-			            <i class="fa fa-facebook-f"></i>
-			          </a>
-			          <a class="btn btn-outline-light btn-social mx-1" href="https://blog.naver.com/t-ave">
-			            <i class="fa fa-edge"></i>
-			          </a>
-			        </div>
-
-			        <div class="col-lg-4">
-			          <h4 class="text-uppercase mb-4">TAVE</h4>
-			          <p class="lead mb-0">Technology wAVE</p>
-			        </div>
-			    </div>
-			</div>
-		</footer>
-
-		<!-- Copyright Section -->
-		<section class="copyright py-4 text-center text-white">
-			<div class="container">
-				<small>Copyright &copy; TAVE</small>
-			</div>
-		</section>
-		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-		<script src="../../../../resources/static/js/bootstrap.js"></script>
-	</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
 </html>

@@ -474,25 +474,97 @@
 				background-image: url('images/wave.jpeg');
 				background-size: cover;
 				text-shadow: black 0.2em 0.2em 0.2em;
-				color: white;
+				color: #ffffff;
 			}
 		</style>
 
 		<%@ include file="/navigation.jsp" %>
 
+		<br><br>
 		<div class="container">
 			<div class="jumbotron">
-				<br><br><br>
-				<h1 class="text-center">TAVE</h1>
-		        <p class="text-center">
-		        <br>
-				Technology wAVE의 약자로
-				4차 산업혁명 기술들의 물결을 선도한다는 뜻을 가지고 있습니다.<br>
-				파도처럼 몰아칠 4차 산업혁명에 무너지지 않고, 기술의 물결을 선도하는 동아리가 되고자 합니다.
-				<br><br><br>
+				<br><br><br><br><br><br>
+				<h1 class="text-center" style="color : #ffffff;">TAVE</h1>
+				<p class="text-center" style="color : #ffffff;">
+					<br>
+					Technology wAVE의 약자로
+					4차 산업혁명 기술들의 물결을 선도한다는 뜻을 가지고 있습니다.<br>
+					파도처럼 몰아칠 4차 산업혁명에 무너지지 않고, 기술의 물결을 선도하는 동아리가 되고자 합니다.
+					<br><br><br><br><br><br>
 				</p>
 			</div>
 		</div>
+
+		<br>
+		<div class="container">
+			<h1 class="text-center">ACTIVITY</h1>
+			<hr>
+
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<div class="activity-item">
+							<img class="img-responsive" src="images/activity1.png" alt="">
+							<div class="overlay">
+								<h2>MT</h2>
+								<div>
+									<a href="#activity1">
+										<p>show more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<div class="activity-item">
+							<img class="img-responsive" src="images/activity2.png" alt="">
+							<div class="overlay">
+								<h2>세션/스터디/강연</h2>
+								<div>
+									<a href="#activity2">
+										<p>show more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<div class="activity-item">
+							<img class="img-responsive" src="images/activity3.png" alt="">
+							<div class="overlay">
+								<h2>Conference</h2>
+								<div>
+									<a href="#activity3">
+										<p>show more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="hovereffect">
+						<div class="activity-item">
+							<img class="img-responsive" src="images/activity4.png" alt="">
+							<div class="overlay">
+								<h2>친목활동</h2>
+								<div>
+									<a href="#activity4">
+										<p>show more</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
 
 		<div class="container">
 			<div class="col-md-12 col-lg-12">
@@ -560,7 +632,7 @@
 		<div class="container">
 			<h1 class="text-center">MEMBERS</h1>
 			<hr>
-			<a href="introTaveMembers.html">
+			<a href="/about/introTaveMembers">
 			<img class="img-responsive center" src="images/taveMembers.png" alt="taveMembers" width="90%">
 			</a>
 		</div>

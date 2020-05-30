@@ -24,12 +24,13 @@ public class MemberDao implements com.tave.project.dto.IMemberDao {
 
         try {
             Class.forName(driver);
-            conn = DriverManager.getConnection(url, userid, userpw);
-            String sql = "INSERT INTO register(memId, memPw, Phone) values(?,?,?)";
+            conn = DriverManager.getConnection(url, userid,userpw);
+            String sql = "INSERT INTO register(memId, memPw, Phone, nickName) values(?,?,?,?)";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, member.getMemId());
             pstmt.setString(2, member.getMemPw());
             pstmt.setString(3, member.getPhone());
+            pstmt.setString(4, member.getnickName());
             result = pstmt.executeUpdate();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -65,13 +66,13 @@ public class MemberDao implements com.tave.project.dto.IMemberDao {
                 String memId = rs.getString("memid");
                 String memPw = rs.getString("mempw");
                 String Phone = rs.getString("Phone");
-                int num = rs.getInt("num");
+                String nickName = rs.getString("nickName");
 
                 mem = new Member();
                 mem.setMemId(memId);
                 mem.setMemPw(memPw);
                 mem.setPhone(Phone);
-                mem.setNum(num);
+                mem.setnickName(nickName);
             }
 
         } catch (ClassNotFoundException e) {

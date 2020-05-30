@@ -21,7 +21,11 @@
 <div class="container">
 	<div class="row">
 		<img class="img-responsive center" src="${cp}/images/recruit.png" alt="recruit">
-		<a href="https://docs.google.com/forms/d/e/1FAIpQLScMADcsju4cC96oUcheV2jJT-IyHZowpbTo8GfX1HET-A35mQ/viewform?vc=0&c=0&w=1&usp=mail_form_link" class="btn btn-primary">지원하러가기</a>
+		<br>
+		<div align="center">
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLScMADcsju4cC96oUcheV2jJT-IyHZowpbTo8GfX1HET-A35mQ/viewform?vc=0&c=0&w=1&usp=mail_form_link" class="btn btn-primary">지원하러가기</a>
+		</div>
+		<br>
 	</div>
 </div>
 

@@ -6,7 +6,7 @@
 <html lang="en" >
 <head>
 
-	<title>운영진 소개</title>
+	<title>후원사</title>
 
 	<link href="${cp}/css/tave.css" rel="stylesheet" />
 	<link href="${cp}/css/bootstrap.css" rel="stylesheet" />
@@ -301,104 +301,183 @@
 
 <%@ include file="/navigation.jsp" %>
 
+<br>
+
 <div class="container">
-	<div class="col-md-12 col-lg-12">
+	<div class="col-md-12 col-lg-3">
 		<article class="post vt-post">
-			<div class="row">
-				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-2">
-					<div class="post-type post-img">
-						<a href="#"><img src="${cp}/images/members/park.png" class="img-responsive" alt="image post"></a>
-					</div>
-					<div class="author-info author-info-2">
-						<ul class="list-inline">
-							<li>
-								<div class="info">
-									<strong>회장</strong></div>
-							</li>
-							<li>
-								<div class="info">
-									<strong>박세일</strong></div>
-							</li>
-						</ul>
+			<a href="https://drive.google.com/drive/folders/12CLRjM89cvEssv3HsT-SQazIu1FiyBop">
+				<div id="team1" aria-hidden="true">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+						<div class="caption">
+							<h3 class="md-heading">1. 머신러닝 공모전 1팀</h3>
+							<ul>
+								<li>정유진</li>
+								<li>박재영</li>
+								<li>오창대</li>
+								<li>박지웅</li>
+								<li>이정연</li>
+								<br>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-10">
-					<div class="caption">
-						<h3 class="md-heading">TAVE에 오신걸 환영합니다</h3>
-						<p>같은 목표를 가진 다재다능한 사람들이 모여 혼자 하기 어려운 프로젝트를 한다면 완성도 높은 결과물을 이끌어 낼 수 있습니다. <br>제가 단언컨대 처음 TAVE를 시작했을 때와 달라진 자신을 만날 수 있을 것입니다.<br> 함께 미래를 그려가는 TAVE, 4차 산업혁명을 대비할 회원들을 모집합니다.</p>
-					</div>
-				</div>
-			</div>
+			</a>
 		</article>
-
-
-
+	</div>
+	<div class="col-md-12 col-lg-3">
 		<article class="post vt-post">
-			<div class="row">
-				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-2">
-					<div class="post-type post-img">
-						<a href="#"><img src="${cp}/images/members/lee.png" class="img-responsive" alt="image post"></a>
-					</div>
-					<div class="author-info author-info-2">
-						<ul class="list-inline">
-							<li>
-								<div class="info">
-									<strong>기술처</strong></div>
-							</li>
-							<li>
-								<div class="info">
-									<strong>이문기</strong></div>
-							</li>
-						</ul>
+			<a href="https://drive.google.com/drive/folders/1DXXMU-Auxyqd9vES3MjTt6GvWx9ypRXd">
+				<div id="team2" aria-hidden="true">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+						<div class="caption">
+							<h3 class="md-heading">2. 머신러닝 공모전 2팀</h3>
+							<ul>
+								<li>민지웅</li>
+								<li>박관용</li>
+								<li>이재훈</li>
+								<li>이정재</li>
+								<li>정다정</li>
+								<li>임영선</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-10">
-					<div class="caption">
-						<h3 class="md-heading">기술처</h3>
-						<p> 각 담당자들은 유기적으로 업무 내용을 공유하며 추진함에 문제가 없도록 한다.<br>
-							IT 흐름에 맞게 각종 스터디 관리를 및 운영 업무를 수행한다. <br>
-							뿐만 아니라 다양한 프로젝트도 찾아 동아리원들에게 공유하기도 한다. <br>
-							컨퍼런스 진행 시 프로젝트 발표 시 체점 기준을 정하고 이에 맞는 순위를 정한다. </p>
-					</div>
-				</div>
-			</div>
+			</a>
 		</article>
-
+	</div>
+	<div class="col-md-12 col-lg-3">
 		<article class="post vt-post">
-			<div class="row">
-				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-2">
-					<div class="post-type post-img">
-						<a href="#"><img src="${cp}/images/members/kim.png" class="img-responsive" alt="image post"></a>
-					</div>
-					<div class="author-info author-info-2">
-						<ul class="list-inline">
-							<li>
-								<div class="info">
-									<strong>경영처</strong></div>
-							</li>
-							<li>
-								<div class="info">
-									<strong>김서경</strong></div>
-							</li>
-						</ul>
+			<a href="https://drive.google.com/drive/folders/1MFxgI6DfI3H5AE4bH3D-q1CuD4Ihi3UV">
+				<div id="team3" aria-hidden="true">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+						<div class="caption">
+							<h3 class="md-heading">3. 머신러닝 공모전 3팀</h3>
+							<ul>
+								<li>김서경</li>
+								<li>김은</li>
+								<li>심소민</li>
+								<li>원희지</li>
+								<li>이문기</li>
+								<br>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-10">
-					<div class="caption">
-						<h3 class="md-heading">경영처</h3>
-						<p> 본 처에는 회계, 인사, 기획, 홍보 등의 담당자들이 있다. <br>
-							각 담당자들은 유기적으로 업무 내용을 공유하며 추진함에 문제가 없도록 한다. <br>
-							회계에서는 정확하게 금전적인 부분에 대해서 나누고 동아리원들에게 알려준다. <br>
-							홍보에서는 동이리에서 새로운 기수를 모집할 때나 동아리에서 활동을 할 때 블로그에 글을 작성하는 등 테이브를 알리기 위해 노력한다. </p>
-					</div>
-				</div>
-			</div>
+			</a>
 		</article>
-
-		<div class="clearfix"></div>
+	</div>
+	<div class="col-md-12 col-lg-3">
+		<article class="post vt-post">
+			<a href="https://drive.google.com/drive/folders/12pVbXKWzFmWyggx8IAXASAtKts2alObu">
+				<div id="team4" aria-hidden="true">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+						<div class="caption">
+							<h3 class="md-heading">4. 머신러닝 공모전 4팀</h3>
+							<ul>
+								<li>강형곤</li>
+								<li>송나은</li>
+								<li>곽우찬</li>
+								<br>
+								<br>
+								<br>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</a>
+		</article>
 	</div>
 </div>
 
+<div class="container">
+	<div class="col-md-12 col-lg-3">
+		<article class="post vt-post">
+			<a href="https://drive.google.com/drive/folders/19hO6F7_Wm05OZguwVO7-mp2p0Jm6EL7A">
+				<div id="team5" aria-hidden="true">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+						<div class="caption">
+							<h3 class="md-heading">5. 파이썬 기반 공모전</h3>
+							<ul>
+								<li>박명진</li>
+								<li>이승연</li>
+								<li>오혜수</li>
+								<li>장예은</li>
+								<li>정서운</li>
+								<br>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</a>
+		</article>
+	</div>
+	<div class="col-md-12 col-lg-3">
+		<article class="post vt-post">
+			<a href=https://drive.google.com/drive/folders/1PTLqCuteNT1EuvV4l3czz2dpYcbF7lZP">
+				<div id="team6" aria-hidden="true">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+						<div class="caption">
+							<h3 class="md-heading">6. 코로나 데이터 프로젝트</h3>
+							<ul>
+								<li>김규리</li>
+								<li>김지현</li>
+								<li>오원진</li>
+								<li>정혜지</li>
+								<br>
+								<br>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</a>
+		</article>
+	</div>
+	<div class="col-md-12 col-lg-3">
+		<article class="post vt-post">
+			<a href="https://drive.google.com/drive/folders/1MFxgI6DfI3H5AE4bH3D-q1CuD4Ihi3UV">
+				<div id="team7" aria-hidden="true">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+						<div class="caption">
+							<h3 class="md-heading">7. R을 이용한 프로젝트</h3>
+							<ul>
+								<li>권희은</li>
+								<li>김다은</li>
+								<li>김인준</li>
+								<li>김현지</li>
+								<br>
+								<br>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</a>
+		</article>
+	</div>
+	<div class="col-md-12 col-lg-3">
+		<article class="post vt-post">
+			<a href="https://drive.google.com/drive/folders/11oqM9YfKxeMIaozEz6jCZwCd4w-Spb43">
+				<div id="team8" aria-hidden="true">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-12">
+						<div class="caption">
+							<h3 class="md-heading">8. 스프링 프로젝트 1팀</h3>
+							<ul>
+								<li>양윤희</li>
+								<li>최인아</li>
+								<li>심세영</li>
+								<li>윤예린</li>
+								<br>
+								<br>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</a>
+		</article>
+	</div>
+</div>
+
+<br>
 <%@ include file="/footer.jsp" %>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
