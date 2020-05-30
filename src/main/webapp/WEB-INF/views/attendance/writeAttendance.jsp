@@ -14,7 +14,7 @@
 
 		<div class="container">
 			<div class="row">
-				<form method="post" action="writeAction.jsp">
+				<form method="post" action="${cp}/attendance/writeAttendance">
 					<table class="table table-striped">
 						<thead>
 							<tr>
@@ -23,14 +23,11 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td><input type="text" class="form-control title" placeholder="제목" name="bbsTitle" maxlength="50"/></td>
+								<td><input type="text" class="form-control title" placeholder="제목" name="title" maxlength="50"/></td>
 							</tr>
 							<tr>
 								<td colspan="2">
-									<form action ="add?pageNum = ${param.pageNum}" method="post" class="btn btn-primary" enctype ="multipart/form-data"
-										  onsubmit="return check()" name = "fm" >
-										<input type = "file" name = "file"/>
-									</form>
+										<input type = "file" name = "filename"/>
 								</td>
 							</tr>
 						</tbody>
@@ -41,7 +38,7 @@
 		</div>
 
 		<br>
-
+<br><br><br><br><br><br><br><br><br><br><br>
 <%@include file="/footer.jsp"%>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

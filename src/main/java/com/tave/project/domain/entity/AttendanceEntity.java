@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
@@ -29,4 +30,5 @@ public class AttendanceEntity {
         this.title = title;
         this.filename = filename;
     }
+
 }

@@ -19,6 +19,8 @@
 
 <div class="container">
 	<div class="row">
+        <h1 class="text-center">ATTENDANCE</h1>
+        <br>
 		<table class="table table-striped">
 			<thead>
 			<tr>
@@ -32,8 +34,8 @@
 			<c:forEach var="photo" items="${attendanceDtoList}">
 
 				<tr>
-					<td> ${photo.id} </td>
-					<td> <a href = "${cp}/viewAttendance/${photo.id}"  style = "color: black"> ${photo.title}</a> </td>
+					<td class="list"> ${photo.id} </td>
+					<td class="list"> <a href = "${cp}/viewAttendance/${photo.title}"  style = "color: black"> ${photo.title}</a> </td>
 
 				</tr>
 			</c:forEach>
@@ -49,6 +51,7 @@
 			</c:forEach>
 			]]
 		</div>
+		<br>
 	</div>
 </div>
 

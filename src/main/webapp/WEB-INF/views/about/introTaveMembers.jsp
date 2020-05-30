@@ -300,14 +300,13 @@
 <body>
 
 <%@ include file="/navigation.jsp" %>
-
 <div class="container">
 	<div class="col-md-12 col-lg-12">
 		<article class="post vt-post">
 			<div class="row">
 				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-2">
 					<div class="post-type post-img">
-						<a href="#"><img src="${cp}/images/avatar.png" class="img-responsive" alt="image post"></a>
+						<a href="#"><img src="${cp}/images/members/park.png" class="img-responsive" alt="image post"></a>
 					</div>
 					<div class="author-info author-info-2">
 						<ul class="list-inline">
@@ -325,7 +324,7 @@
 				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-10">
 					<div class="caption">
 						<h3 class="md-heading">TAVE에 오신걸 환영합니다</h3>
-						<p>대학정보보호동아리연합회(KUCIS : Korea University Clubs Information Security)는 한국인터넷진흥원(구 한국정보보호진흥원)에서 주관하는 ‘대학정보보호동아리 지원사업’에 참여하는 대한민국 대학(교)의 정보보호 및 컴퓨터 보안 동아리의 모임이자 대한민국의 해커그룹이다.</p>
+						<p>같은 목표를 가진 다재다능한 사람들이 모여 혼자 하기 어려운 프로젝트를 한다면 완성도 높은 결과물을 이끌어 낼 수 있습니다. <br>제가 단언컨대 처음 TAVE를 시작했을 때와 달라진 자신을 만날 수 있을 것입니다.<br> 함께 미래를 그려가는 TAVE, 4차 산업혁명을 대비할 회원들을 모집합니다.</p>
 					</div>
 				</div>
 			</div>
@@ -337,26 +336,28 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-2">
 					<div class="post-type post-img">
-						<a href="#"><img src="${cp}/images/avatar.png" class="img-responsive" alt="image post"></a>
+						<a href="#"><img src="${cp}/images/members/lee.png" class="img-responsive" alt="image post"></a>
 					</div>
 					<div class="author-info author-info-2">
 						<ul class="list-inline">
 							<li>
 								<div class="info">
-									<strong>쫄병</strong></div>
+									<strong>기술처</strong></div>
 							</li>
 							<li>
 								<div class="info">
-									<strong>앙버터</strong></div>
+									<strong>이문기</strong></div>
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-10">
 					<div class="caption">
-						<h3 class="md-heading">전 딱갈이</h3>
-						<p>
-							2000년 한국정보보호진흥원의 대학정보보호동아리 지원사업의 시작과 함께 결성되었으며, 3개년 지원 계획에 따라 2003년에 종료되었다. 이후, 대학 정보보호 인력의 올바른 정보보호 마인드를 배양하고, 우수한 정보보호 인력양성을 위해 2006년을 기점으로 다시 지원사업이 재개되었다. </p>
+						<h3 class="md-heading">기술처</h3>
+						<p> 각 담당자들은 유기적으로 업무 내용을 공유하며 추진함에 문제가 없도록 한다.<br>
+							IT 흐름에 맞게 각종 스터디 관리를 및 운영 업무를 수행한다. <br>
+							뿐만 아니라 다양한 프로젝트도 찾아 동아리원들에게 공유하기도 한다. <br>
+							컨퍼런스 진행 시 프로젝트 발표 시 체점 기준을 정하고 이에 맞는 순위를 정한다. </p>
 					</div>
 				</div>
 			</div>
@@ -366,56 +367,33 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-2">
 					<div class="post-type post-img">
-						<a href="#"><img src="${cp}/images/avatar.png" class="img-responsive" alt="image post"></a>
+						<a href="#"><img src="${cp}/images/members/kim.png" class="img-responsive" alt="image post"></a>
 					</div>
 					<div class="author-info author-info-2">
 						<ul class="list-inline">
 							<li>
 								<div class="info">
-									<strong>찡끗</strong></div>
+									<strong>경영처</strong></div>
 							</li>
 							<li>
 								<div class="info">
-									<strong>최인아</strong></div>
+									<strong>김서경</strong></div>
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-10">
 					<div class="caption">
-						<h3 class="md-heading">난 잉아링</h3>
-						<p> 본 사업은 전문성 강화를 위한 교육, 세미나, 워크샵 개최 [1] 및 경진대회를 통한 우수 동아리 해외 컨퍼런스 참가기회 부여, 정보화 소외계층을 대상으로 한 봉사활동[2][3] 등의 활동을 하고 있으며, 매년 40개 내외의 대학 동아리(해커그룹)가 ‘대학정보보호동아리 지원사업’에 선정되어 [4] 활동하고 있다. 매년 활동 실적을 평가하여 활동 실적이 우수한 동아리(해커그룹)는 시상 [5] 을 한다..</p>
+						<h3 class="md-heading">경영처</h3>
+						<p> 본 처에는 회계, 인사, 기획, 홍보 등의 담당자들이 있다. <br>
+							각 담당자들은 유기적으로 업무 내용을 공유하며 추진함에 문제가 없도록 한다. <br>
+							회계에서는 정확하게 금전적인 부분에 대해서 나누고 동아리원들에게 알려준다. <br>
+							홍보에서는 동이리에서 새로운 기수를 모집할 때나 동아리에서 활동을 할 때 블로그에 글을 작성하는 등 테이브를 알리기 위해 노력한다. </p>
 					</div>
 				</div>
 			</div>
 		</article>
-		<article class="post vt-post">
-			<div class="row">
-				<div class="col-xs-12 col-sm-5 col-md-5 col-lg-2">
-					<div class="post-type post-img">
-						<a href="#"><img src="${cp}/images/avatar.png" class="img-responsive" alt="image post"></a>
-					</div>
-					<div class="author-info author-info-2">
-						<ul class="list-inline">
-							<li>
-								<div class="info">
-									<strong>껄껄</strong></div>
-							</li>
-							<li>
-								<div class="info">
-									<strong>세영</strong></div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-7 col-md-7 col-lg-10">
-					<div class="caption">
-						<h3 class="md-heading">난 세영링</h3>
-						<p> 본 사업은 전문성 강화를 위한 교육, 세미나, 워크샵 개최 [1] 및 경진대회를 통한 우수 동아리 해외 컨퍼런스 참가기회 부여, 정보화 소외계층을 대상으로 한 봉사활동[2][3] 등의 활동을 하고 있으며, 매년 40개 내외의 대학 동아리(해커그룹)가 ‘대학정보보호동아리 지원사업’에 선정되어 [4] 활동하고 있다. 매년 활동 실적을 평가하여 활동 실적이 우수한 동아리(해커그룹)는 시상 [5] 을 한다..</p>
-					</div>
-				</div>
-			</div>
-		</article>
+
 		<div class="clearfix"></div>
 	</div>
 </div>

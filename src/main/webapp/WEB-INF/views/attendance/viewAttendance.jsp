@@ -19,15 +19,14 @@
 		<table class="table table-striped">
 			<thead>
 			<tr>
-				<th colspan="3" class="viewTitle">${boardDto.title}</th>
+				<th colspan="3" class="viewTitle">${AttendanceDto.title}</th>
 			</tr>
 			</thead>
 			<tbody>
 			<tr>
 
 				<td class="temp"></td>
-				<td align="right" class="viewWriter">${boardDto.writer}</td>
-				<td>${boardDto.createdDate}</td>
+				<td align="right" class="viewWriter">${AttendanceDto.writer}</td>
 			</tr>
 			<tr>
 				<form action ="add?pageNum = ${param.pageNum}" method="post" class="btn btn-primary" enctype ="multipart/form-data"

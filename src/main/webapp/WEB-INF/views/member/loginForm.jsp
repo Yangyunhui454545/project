@@ -104,7 +104,7 @@
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="col-lg-12">
-				<form:form action="${cp}/member/loginForm" method="post" modelAttribute="member">
+				<form:form action="${cp}/member/login" method="post" modelAttribute="member">
 					<h2>TAVE Sign In</h2>
 					<label>
 						<p class="label-txt">기수 + 이름 ex) 5기 최인아</p>

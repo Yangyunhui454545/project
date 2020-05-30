@@ -25,36 +25,7 @@ public class BoardController {
         return request.getContextPath();
     }
 
-    @RequestMapping(value = "add", method =RequestMethod.GET)
-    public String add() {
-        return "attendance/attendance";
-    }
-    @RequestMapping(value ="add", method = RequestMethod.POST)
-    public String add(HttpServletRequest request, @RequestParam("file") MultipartFile multipartFile, @ModelAttribute BoardDto board) throws Exception{
-    String filename = null;
-    if(!multipartFile.isEmpty()) {
-        ServletContext application = request.getServletContext();
-        String realPath = application.getRealPath("/upload");
 
-        filename = multipartFile.getOriginalFilename();
-
-        int index = filename.lastIndexOf("\\");
-        filename = filename.substring(index + 1);
-
-        File file = new File(realPath, filename);
-        if(file.exists()){
-            filename = System.currentTimeMillis() + "_" + filename;
-            file = new File(realPath, filename);
-        }
-        IOUtils.copy(multipartFile.getInputStream(), new FileOutputStream(file));
-    }   else{
-        System.out.println("파일이 존재하지 않거나 파일크기가 0입니다.");
-    }
-        //board.setFilename(filename);
-        //board.setReg_date(new Timestamp(System.currentTimeMillis()));
-        //boardService.add(board);
-        return "redirect:/";
-    }
     /* 공지게시글 목록 */
     @GetMapping("/notice/list")
     public String list(Model model, @RequestParam(value="page", defaultValue = "1") Integer pageNum) {
@@ -104,11 +75,12 @@ public class BoardController {
     public String write() {
         return "notice/write";
     }
+
     @PostMapping("/write")
     public String write(BoardDto boardDto) {
         boardService.savePost(boardDto);
 
-        return "notice/list";
+        return "redirect:/notice/list";
     }
     /* 게시글 상세 */
     @GetMapping("/detail/{no}")

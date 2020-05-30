@@ -24,6 +24,8 @@
 
 <div class="container">
 	<div class="row">
+        <h1 class="text-center">REVIEW</h1>
+        <br>
 		<table class="table table-striped">
 			<thead>
 			<tr>
@@ -40,10 +42,10 @@
 			<c:forEach var="board" items="${boardList}">
 
 				<tr>
-					<td> ${board.id} </td>
-					<td> <a href = "${cp}/detail/${board.id}" style = "color: black"> ${board.title}</a> </td>
-					<td> ${board.writer} </td>
-					<td> ${board.createdDate}" </td>
+					<td class="list"> ${board.id} </td>
+					<td class="list"> <a href = "${cp}/detail/${board.id}" style = "color: black"> ${board.title}</a> </td>
+					<td class="list"> ${board.writer} </td>
+					<td class="list"> ${board.createdDate}" </td>
 				</tr>
 			</c:forEach>
 			</tbody>
@@ -57,6 +59,7 @@
 			</c:forEach>
 			]]
 		</div>
+		<br>
 	</div>
 </div>
 

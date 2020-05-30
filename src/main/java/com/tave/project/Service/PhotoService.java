@@ -24,7 +24,7 @@ public class PhotoService {
 
     @Transactional
     public List<AttendanceDto> getPhotolist(Integer pageNum) {
-        Page<AttendanceEntity> page = attendanceRepository.findAll(PageRequest.of(pageNum - 1, PAGE_POST_COUNT, Sort.by(Sort.Direction.DESC)));
+        Page<AttendanceEntity> page = attendanceRepository.findAll(PageRequest.of(pageNum - 1, PAGE_POST_COUNT, Sort.by(Sort.Direction.DESC, "id")));
 
         List<AttendanceEntity> attendanceEntities = page.getContent();
         List<AttendanceDto> attendanceDtoList = new ArrayList<>();
